@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Nancy Drew Quiz</title>
+    </head>
+
+    <body>
+        <h1>Mystery at Code Fellows Inn</h1>
+        <h2>Do you have what it takes to keep up with Nancy Drew?</h1>
+        <h3>A small town girl from River Heights, 16 year-old Nancy Drew has cracked a case in every 
+            corner of the world. Find out if you too have what it takes to be a super sleuth.</h3>
+                        
+        <p>Do you have a strong sense of curiosity?
+        <p>Are you good at remembering small details? 
+        <p>Have you ever hopped on a plane on a whim?</p>
+        <p>Have you ever had a secret identity?
+        <p>Do you always carry a magnifying glass?
+
+            
+        <script>
+            console.log('Quiz Responses');
+
+            alert('Please answer Y for yes or N for no');
+
+            // Quiz question about user's curiosity
+            var curiosity = prompt('Do you have a strong sense of curiosity?');
+            var curiosity_upper = curiosity.toUpperCase()
+            alert('Sense of curiosity: ' + curiosity_upper);
+            console.log('Sense of curiosity: ' + curiosity_upper);
+            
+            // Quiz question about user's attention to detail
+            var detail = prompt('Are you good at remembering small details? ');
+            var detail_upper = detail.toUpperCase()
+            alert('Can remember small details:' + detail_upper);
+            console.log('Can remember small details: ' + detail_upper);
+
+            // Quiz question about user's likeliness to jet off on a case
+            var travel = prompt('Have you ever hopped on a plane on a whim?');
+            var travel_upper = travel.toUpperCase()
+            alert('Likely to jet set: ' + travel_upper);
+            console.log('Likely to jet set: ' + travel_upper);
+
+            var identity = prompt('Have you ever had a secret identity?');
+            var identity_upper = identity.toUpperCase()
+            alert('Secret identity: ' + identity_upper);
+            console.log('Secret identity: ' + identity_upper);
+
+
+            // Quiz question about user's ownership of a magnifying glass
+            var magnifying_glass = prompt('Do you always carry a magnifying glass?');
+            var magnifying_glass_upper = magnifying_glass.toUpperCase()
+            console.log('Do you always carry a magnifying glass: ' + magnifying_glass_upper);
+            
+        </script>
+</html>
