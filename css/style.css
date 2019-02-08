@@ -1,12 +1,17 @@
 * 
-h1, h2 {
-    color: #292020;
+h1 {
+    color: #000000;
 }
 
-p {
-    color: #255cd1;
+h2, h3, h4 {
+    color: #bb0811;
+}
+
+li {
+    color: #292020;
+
 }
 
 body {
-    background-color: #d2b48c;
+    background-color: #e0c9ab;
 }
