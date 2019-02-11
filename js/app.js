@@ -78,7 +78,8 @@ alert('You answered: ' + curiosity + ', ' + detail + ', ' + travel + ', ' + iden
 //Award bonus point for correctly guessing which of the 175 Nancy Drew books is the featured book of the day.
 alert('Bonus point for guessing which book number is the featured book of the day.');
 
-//Question 6 about picking the Nancy Drew book number of the day confirm user guess is a float
+// Question 6 about picking the Nancy Drew book number of the day
+//confirm user guess is a float
 var book_num = 99;
 var user_guess = prompt('Guess the book of the day: ');
 
@@ -104,11 +105,11 @@ for (var guesses = 3; guesses > 0; guesses--) {
 
 if (parseInt(user_guess) !== book_num) {
   alert('Out of guesses.');
-  alert('The book of the day is number ' + book_num) + '.';
-
+  alert('The book of the day is number ' + book_num + '.');
+}
 
 // Question 7 about naming one of Nancy's main phone contacts.
-var nancy_friends = ['her dad', 'mr. drew', 'mr drew', 'father', 'carson drew', 'frank', 'frank hardy', 'joe', 'joe hardy', 'bess', 'bess marvin', 'geroge', 'george fayne', 'hannah', 'hannah gruen', 'ned', 'ned nickerson'];
+var nancy_friends = ['her Dad', 'mr. drew', 'mr drew', 'father', 'carson drew', 'frank', 'frank hardy', 'joe', 'joe hardy', 'bess', 'bess marvin', 'geroge', 'george fayne', 'hannah', 'hannah gruen', 'ned', 'ned nickerson'];
 var user_guess_friends = prompt('Name one person Nancy can call to help solve a mystery.').toLowerCase();
 
 //Struggling to access a correct answer inside of an array. Line 117.
