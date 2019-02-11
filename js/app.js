@@ -78,8 +78,7 @@ alert('You answered: ' + curiosity + ', ' + detail + ', ' + travel + ', ' + iden
 //Award bonus point for correctly guessing which of the 175 Nancy Drew books is the featured book of the day.
 alert('Bonus point for guessing which book number is the featured book of the day.');
 
-// Question 6 about picking the Nancy Drew book number of the day
-//confirm user guess is a float
+//Question 6 about picking the Nancy Drew book number of the day confirm user guess is a float
 var book_num = 99;
 var user_guess = prompt('Guess the book of the day: ');
 
@@ -103,40 +102,31 @@ for (var guesses = 3; guesses > 0; guesses--) {
   }
 }
 
-// if (parseInt(user_guess) !== book_num) {
-//   alert('Out of guesses.');
-//   alert('The book of the day is number ' + book_num) + '.';
-// }
+if (parseInt(user_guess) !== book_num) {
+  alert('Out of guesses.');
+  alert('The book of the day is number ' + book_num) + '.';
 
-// // Question 7 about naming one of Nancy's main phone contacts.
-// var nancy_friends = ['her Dad', 'mr. drew', 'mr drew', 'father', 'carson drew', 'frank', 'frank hardy', 'joe', 'joe hardy', 'bess', 'bess marvin', 'geroge', 'george fayne', 'hannah', 'hannah gruen', 'ned', 'ned nickerson'];
-// var user_guess_friends = prompt('Name one person Nancy can call to help solve a mystery.').toLowerCase();
 
-// for (i = 0; i < 6; i++) {
-//   if (user_guess_friends in nancy_friends) {
-//     alert('Correct!');
-//     console.log('User correctly answered '+ user_guess_friends + ' as Nancy\'s friend');
-//     break;
-//   } else (user_guess_friends !== nancy_friends[i]) {
-//     user_guess_friends = prompt('Incorrect. Guess again.');
-//     console.log('Incorrect answer: ' + user_guess_friends);
-//     continue;
-//   }
-// }
+// Question 7 about naming one of Nancy's main phone contacts.
+var nancy_friends = ['her dad', 'mr. drew', 'mr drew', 'father', 'carson drew', 'frank', 'frank hardy', 'joe', 'joe hardy', 'bess', 'bess marvin', 'geroge', 'george fayne', 'hannah', 'hannah gruen', 'ned', 'ned nickerson'];
+var user_guess_friends = prompt('Name one person Nancy can call to help solve a mystery.').toLowerCase();
 
-// if (user_guess_friends !== nancy_friends[j]) {
-//   alert('Better go re-read the books.');
-// }
+//Struggling to access a correct answer inside of an array. Line 117.
+for (var i = 1; i < 7; i++) {
+  if (user_guess_friends in nancy_friends) {
+    alert('Correct!');
+    console.log('User correctly answered '+ user_guess_friends + ' as Nancy\'s friend');
+    break;
+  } else if (user_guess_friends !== nancy_friends[i]) {
+    user_guess_friends = prompt('Incorrect. Guess again.');
+    console.log('Incorrectly guessed a friend');
+  }
+}
 
-  // for (var guesses2 = 6; guesses2 > 0; guesses2--) {
-  //   if (nancy_friends[user_guess_friends] === nancy_friends[j]){
-  //     alert('Correct!');
-  //     console.log('User entered '+ user_guess_friends + ' as Nancy\'s friend');
-  //   } else if (nancy_friends[user_guess_friends] !== nancy_friends[j]) {
-  //     alert('Incorrect. You have ' + guesses +' more guesses.'); 
-  //   }
-  // }
+if (user_guess_friends !== nancy_friends[i]) {
+  alert('Better go re-read the books. Possible answers were ' + nancy_friends);
+}
+
 // Tally points
 
 // Confirm if they are a Nancy Drew
-
