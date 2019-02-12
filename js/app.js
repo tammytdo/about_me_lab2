@@ -1,3 +1,4 @@
+
 function intro() {
   console.log('Quiz Responses');
   alert('Are you a true Nancy Drew?');
@@ -187,3 +188,30 @@ askBookNum();
 nancyFriend();
 keepTally();
 confirmNancyDrew();
+
+
+
+var nancy_characteristics = {
+  name : 'Nancy',
+  age : 16,
+  hair_Color : 'blonde',
+  fav_color : 'red',
+  fav_book_genre : 'mystery',
+  signature : function(){
+    console.log('Love, ' + this.name);
+  }
+};
+
+var ned_characteristics = {
+  name : 'Ned',
+  age : 17,
+  hair_Color : 'brown',
+  fav_color : 'blue',
+  fav_book_genre : 'romance',
+  signature : function(){
+    console.log('Thanks! -' + this.name);
+  }
+};
+
+nancy_characteristics['signature']();
+ned_characteristics.signature();
