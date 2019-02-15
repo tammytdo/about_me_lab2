@@ -111,7 +111,7 @@ function askBookNum(book_num) {
       user_guess = prompt('Too high. Guess again.');
       console.log('User guess too high');
     } else if (user_guess < book_num) {
-      user_guess = prompt('Too low. Guess again.'); 
+      user_guess = prompt('Too low. Guess again.');
       console.log('You guessed too low! Guess again.');
     } else {
       user_guess = prompt('Invalid entry. Pick a number.');
