@@ -11,24 +11,15 @@ var tally = [];
 
 // Question 1 about user's curiosity
 function hasCuriosity() {
-  var valid_answer = false;
-  do {
-    var curiosity = prompt('Do you have a strong sense of curiosity?').toUpperCase();
-    if (curiosity === 'N' || curiosity === 'NO') {
-      alert('Hmm...');
-      valid_answer = true;
-      tally.push(1);
-      break;
-    } else if (curiosity === 'Y' || curiosity === 'YES') { 
-      alert('It\'s a Nancy Drew thing');
-      valid_answer = true;
-      break;
-    }
-
-    if (!valid_answer) {
-      alert('Invalid answer. Enter Yes or No.');
-    }
-  } while (!valid_answer);
+  var curiosity = prompt('Do you have a strong sense of curiosity?').toUpperCase();
+  if (curiosity === 'N' || curiosity === 'NO') {
+    alert('Hmm...');
+  } else if (curiosity === 'Y' || curiosity === 'YES') { 
+    alert('It\'s a Nancy Drew thing');
+    tally.push(1);
+  } else {
+    alert('Invalid answer.');
+  }
   return console.log('Sense of curiosity: ' + curiosity);
 }
 
@@ -41,9 +32,9 @@ function hasDetail() {
     alert('Sounds like you know the secret of the old clock');
     tally.push(1);
   } else {
-    alert('Invalid answer. Enter Yes or No.');
+    alert('Invalid answer.');
   }
-  return console.log('Can remember small details: ' + detail);  
+  return console.log('Can remember small details: ' + detail);
 }
 
 // Question 3 about user's likeliness to jet off on a case
@@ -55,13 +46,13 @@ function hasWhim() {
     alert('You\'re hot on the trail!');
     tally.push(1);
   } else {
-    alert('Invalid answer. Enter Yes or No.');
+    alert('Invalid answer.');
   }
   console.log('Likely to go on a whim: ' + whim);
 }
 
 
-  // Question 4 about user's secret identity
+// Question 4 about user's secret identity
 function hasSecretID() {
   var identity = prompt('Have you ever had a secret identity?').toUpperCase();
   if (identity === 'N' || identity === 'NO') {
@@ -70,7 +61,7 @@ function hasSecretID() {
     alert('You\'re hot on the trail!');
     tally.push(1);
   } else {
-    alert('Invalid answer. Enter Yes or No.');
+    alert('Invalid answer.');
   }
   return console.log('Secret identity: ' + identity);
 }
@@ -84,7 +75,7 @@ function hasMagnifyGlass() {
     alert('The ultimate deadly device');
     tally.push(1);
   } else {
-    alert('Invalid answer. Enter Yes or No.');
+    alert('Invalid answer.');
   }
   return console.log('Has a magnifying glass: ' + magnifying_glass);
 }
@@ -97,7 +88,7 @@ function repeatResponses(hasCuriosity, hasDetail, hasWhim, hasSecretID, hasMagni
 function generateBookNum() {
   // Question 6 about picking the Nancy Drew book number of the day
   //confirm user guess is a float
-  var book_num = 99;
+  var book_num = parseInt(99);
   return book_num;
 }
 
@@ -123,7 +114,7 @@ function askBookNum(book_num) {
       user_guess = prompt('Too low. Guess again.');
       console.log('You guessed too low! Guess again.');
     } else {
-      user_guess = prompt("Invalid entry. Pick a number.");
+      user_guess = prompt('Invalid entry. Pick a number.');
     }
   }
 
@@ -157,12 +148,10 @@ function nancyFriend() {
 }
 
 function keepTally() {
-  // Tally points
-  for (i in tally) {
-    alert('You got ' + tally.length + ' points.');
-    console.log('User earned ' + tally.length + ' points.');
-  }
+  alert('You got ' + tally.length + ' points.');
+  console.log('User earned ' + tally.length + ' points.');  
 }
+
 
 function confirmNancyDrew() {
   // Confirm if they are a Nancy Drew
