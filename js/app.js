@@ -18,7 +18,7 @@ function hasCuriosity() {
     alert('It\'s a Nancy Drew thing');
     tally.push(1);
   } else {
-    alert('Invalid answer.');
+    alert('Invalid answer.'); 
   }
   return console.log('Sense of curiosity: ' + curiosity);
 }

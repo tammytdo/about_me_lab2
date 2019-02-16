@@ -1,9 +1,16 @@
 # about_me_lab2
 <!-- Note to self. Come back and complete the README file. Enter it in Markdown -->
 
-General project information (what does it do, who wrote it, who collaborated, which tools are used)
-Instructions for installation and use
-Information on the license
-Acknowledgements, etc.
+A Nancy Drew Quiz
 
-Lastly, remember to keep your README up to date! Don't just create it and then neglect it!
+Exciting five question quiz, with bonuses, to find out if you are a true Nancy Drew. Written by Tammy Do for all the fans of the series and mystery books alike. 
+
+Created with HTML5, CSS3, & JavaScript. 
+
+Visit https://tammytdo.github.io/about_me_lab2/ for game play. 
+
+MIT license. 
+
+Acknoledgments to the instruction team at Code Fellows for teaching my how to build a great product. 
+
+Updated Feb 12, 2019. 
