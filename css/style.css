@@ -1,22 +1,20 @@
-body {
-    margin: 15px;
-}
-
-h1 {
+h1, h2, h3 {
     color: #bb0811;
-}
-
-h2 {
-    color: #bb0811;
+    margin: 15px 15px 0px 15px;
 }
 
 h3 {
-    color: #bb0811;
     font-size: 20px;
 }
 
 p {
     font-size: 20px;
+    width: 50%;
+    margin: 15px 15px 20px 15px;
+}
+
+li {
+    font-size: 18px;
 }
 
 footer {
@@ -27,18 +25,26 @@ div {
     margin: 15px;
 }
 
-#intro {
-    margin: 15px 15px 50px 15px;
-}
-
 #questions {
-    margin: 15px 15px 50px 15px;
+    margin: 15px 15px 50px 0px;
 }
 
 #books {
-    margin: 15px 15px 50px 15px;
+    margin: 15px 15px 50px 0px;
 }
 
 footer {
+    padding: 3px;
+    background-color: red;
+    margin: 0px;
+}
+
+#footer_text {
+    color: white;
+    margin: 15px;
+}
+
+img {
+    height: 300px;
     margin: 15px;
 }
