@@ -1,134 +1,109 @@
-// Characteristics
-var nancy_characteristics = {
-  name : 'Nancy',
-  age : 16,
-  hair_Color : 'blonde',
-  fav_color : 'red',
-  fav_book_genre : 'mystery',
-  signature : function(){
-    console.log('Love, ' + this.name);
-  }
-};
+'use strict';
 
-var ned_characteristics = {
-  name : 'Ned',
-  age : 17,
-  hair_Color : 'brown',
-  fav_color : 'blue',
-  fav_book_genre : 'romance',
-  signature : function(){
-    console.log('Thanks! -' + this.name);
-  }
-};
+// // Intro
+// function intro() {
+//   console.log('Quiz Responses');
+//   alert('Are you a true Nancy Drew?');
+//   alert('Take the ultimate quiz to find out');
+//   alert('Enter either Yes or No');
+// }
 
-// Intro
-function intro() {
-  console.log('Quiz Responses');
-  alert('Are you a true Nancy Drew?');
-  alert('Take the ultimate quiz to find out');
-  alert('Enter either Yes or No');
-}
+// // Keep a tally of points
+// var tally = [];
 
-// Keep a tally of points
-var tally = [];
+// // Question 1: Curiosity
+// function hasCuriosity() {
+//   var curiosity = prompt('Do you have a strong sense of curiosity?').toUpperCase();
+//   if (curiosity === 'N' || curiosity === 'NO') {
+//     alert('Hmm...');
+//   } else if (curiosity === 'Y' || curiosity === 'YES') { 
+//     alert('It\'s a Nancy Drew thing');
+//     tally.push(1);
+//   } else {
+//     alert('Invalid answer.'); 
+//   }
+//   return console.log('Sense of curiosity: ' + curiosity);
+// }
 
-// Question 1: Curiosity
-function hasCuriosity() {
-  var curiosity = prompt('Do you have a strong sense of curiosity?').toUpperCase();
-  if (curiosity === 'N' || curiosity === 'NO') {
-    alert('Hmm...');
-  } else if (curiosity === 'Y' || curiosity === 'YES') { 
-    alert('It\'s a Nancy Drew thing');
-    tally.push(1);
-  } else {
-    alert('Invalid answer.'); 
-  }
-  return console.log('Sense of curiosity: ' + curiosity);
-}
+// // Question 2: Attention to detail
+// function hasDetail() {
+//   var detail = prompt('Are you good at remembering small details? ').toUpperCase();
+//   if (detail === 'N' || detail === 'NO') {
+//     alert('Hmm...');
+//   } else if (detail === 'Y' || detail === 'YES') { 
+//     alert('Sounds like you know the secret of the old clock');
+//     tally.push(1);
+//   } else {
+//     alert('Invalid answer.');
+//   }
+//   return console.log('Can remember small details: ' + detail);
+// }
 
-// Question 2: Attention to detail
-function hasDetail() {
-  var detail = prompt('Are you good at remembering small details? ').toUpperCase();
-  if (detail === 'N' || detail === 'NO') {
-    alert('Hmm...');
-  } else if (detail === 'Y' || detail === 'YES') { 
-    alert('Sounds like you know the secret of the old clock');
-    tally.push(1);
-  } else {
-    alert('Invalid answer.');
-  }
-  return console.log('Can remember small details: ' + detail);
-}
-
-// Question 3: Jetsetter
-function hasWhim() {
-  var whim = prompt('Have you ever gone on a trip on a whim?').toUpperCase();
-  if (whim === 'N' || whim === 'NO') {
-    alert('I\'ll bet');
-  } else if (whim === 'Y' || whim === 'YES') { 
-    alert('You\'re hot on the trail!');
-    tally.push(1);
-  } else {
-    alert('Invalid answer.');
-  }
-  console.log('Likely to go on a whim: ' + whim);
-}
+// // Question 3: Jetsetter
+// function hasWhim() {
+//   var whim = prompt('Have you ever gone on a trip on a whim?').toUpperCase();
+//   if (whim === 'N' || whim === 'NO') {
+//     alert('I\'ll bet');
+//   } else if (whim === 'Y' || whim === 'YES') { 
+//     alert('You\'re hot on the trail!');
+//     tally.push(1);
+//   } else {
+//     alert('Invalid answer.');
+//   }
+//   console.log('Likely to go on a whim: ' + whim);
+// }
 
 
-// Question 4: Secret identity
-function hasSecretID() {
-  var identity = prompt('Have you ever had a secret identity?').toUpperCase();
-  if (identity === 'N' || identity === 'NO') {
-    alert('Hmm...');
-  } else if (identity === 'Y' || identity === 'YES') { 
-    alert('You\'re hot on the trail!');
-    tally.push(1);
-  } else {
-    alert('Invalid answer.');
-  }
-  return console.log('Secret identity: ' + identity);
-}
+// // Question 4: Secret identity
+// function hasSecretID() {
+//   var identity = prompt('Have you ever had a secret identity?').toUpperCase();
+//   if (identity === 'N' || identity === 'NO') {
+//     alert('Hmm...');
+//   } else if (identity === 'Y' || identity === 'YES') { 
+//     alert('You\'re hot on the trail!');
+//     tally.push(1);
+//   } else {
+//     alert('Invalid answer.');
+//   }
+//   return console.log('Secret identity: ' + identity);
+// }
 
-// Question 5: Magnifyer
-function hasMagnifyGlass() {
-  var magnifying_glass = prompt('Do you have a magnifying glass?').toUpperCase();
-  if (magnifying_glass === 'N' || magnifying_glass === 'NO') {
-    alert('Hmm...');
-  } else if (magnifying_glass === 'Y' || magnifying_glass === 'YES') { 
-    alert('The ultimate deadly device');
-    tally.push(1);
-  } else {
-    alert('Invalid answer.');
-  }
-  return console.log('Has a magnifying glass: ' + magnifying_glass);
-}
+// // Question 5: Magnifyer
+// function hasMagnifyGlass() {
+//   var magnifying_glass = prompt('Do you have a magnifying glass?').toUpperCase();
+//   if (magnifying_glass === 'N' || magnifying_glass === 'NO') {
+//     alert('Hmm...');
+//   } else if (magnifying_glass === 'Y' || magnifying_glass === 'YES') { 
+//     alert('The ultimate deadly device');
+//     tally.push(1);
+//   } else {
+//     alert('Invalid answer.');
+//   }
+//   return console.log('Has a magnifying glass: ' + magnifying_glass);
+// }
 
-// Repeat back responses
-function repeatResponses(hasCuriosity, hasDetail, hasWhim, hasSecretID, hasMagnifyGlass) {
-  return 'You answered: ' + hasCuriosity + ', ' + hasDetail + ', ' + hasWhim + ', ' + hasSecretID + ', ' + hasMagnifyGlass;
-}
+// // Repeat back responses
+// function repeatResponses(hasCuriosity, hasDetail, hasWhim, hasSecretID, hasMagnifyGlass) {
+//   return 'You answered: ' + hasCuriosity + ', ' + hasDetail + ', ' + hasWhim + ', ' + hasSecretID + ', ' + hasMagnifyGlass;
+// }
 
-// Generate random book number
-function generateBookNum() {
-  var book_num = parseInt(99);
-  return book_num;
-}
+// Question 6: bonus point for correctly guessing which of the 175 Nancy Drew books is the featured book of the day.
+function bookOfTheDay() {
+  var book_num = Math.floor(Math.random() * 175) + 1;
 
-// Question 6: Award bonus point for correctly guessing which of the 175 Nancy Drew books is the featured book of the day.
-function askBookNum(book_num) {
   alert('Bonus point for guessing which book number is the featured book of the day.');
 
   var user_guess = prompt('Guess which of the 175 books is the book of the day: ');
+  
 
   for (var guesses = 3; guesses > 0; guesses--) {
     if (parseInt(user_guess) === book_num) {
       alert('Bingo!');
       tally.push(1);
       return console.log('User guessed the correct number: ' + user_guess);
-      break;
     } else if (user_guess > 175) {
       console.log('User guessed too high.');
-      user_guess = prompt(' There are only 175 books! Guess again.')
+      user_guess = prompt(' There are only 175 books! Guess lower.')
     } else if (user_guess > book_num && user_guess <= 175) {
       user_guess = prompt('Too high. Guess again.');
       console.log('User guess too high');
@@ -136,13 +111,13 @@ function askBookNum(book_num) {
       user_guess = prompt('Too low. Guess again.');
       console.log('You guessed too low! Guess again.');
     } else {
-      user_guess = prompt('Invalid entry. Pick a number.');
+      user_guess = prompt('Invalid entry. Pick a valid number.');
     }
   }
 
   if (parseInt(user_guess) !== book_num) {
     alert('Out of guesses.');
-    return 'The book of the day is number ' + book_num + '.';
+    alert('The book of the day is #' + book_num + '.');
   }
 }
 
@@ -186,16 +161,41 @@ function confirmNancyDrew() {
   }
 }
 
+// Characteristics
+// var nancy_characteristics = {
+//   name : 'Nancy',
+//   age : 16,
+//   hair_Color : 'blonde',
+//   fav_color : 'red',
+//   fav_book_genre : 'mystery',
+//   signature : function(){
+//     console.log('Love, ' + this.name);
+//   }
+// };
+
+// var ned_characteristics = {
+//   name : 'Ned',
+//   age : 17,
+//   hair_Color : 'brown',
+//   fav_color : 'blue',
+//   fav_book_genre : 'romance',
+//   signature : function(){
+//     console.log('Thanks! -' + this.name);
+//   }
+// };
+
+
 function run_quiz() {
-  intro();
-  hasCuriosity();
-  hasDetail();
-  hasWhim();
-  hasSecretID();
-  hasMagnifyGlass();
-  repeatResponses();
-  generateBookNum();
-  askBookNum();
+  // intro();
+  // hasCuriosity();
+  // hasDetail();
+  // hasWhim();
+  // hasSecretID();
+  // hasMagnifyGlass();
+  // repeatResponses();
+  // generateBookNum();
+  // askBookNum();
+  bookOfTheDay();
   nancyFriend();
   keepTally();
   confirmNancyDrew();
