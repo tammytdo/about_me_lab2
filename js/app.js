@@ -1,4 +1,27 @@
+// Characteristics
+var nancy_characteristics = {
+  name : 'Nancy',
+  age : 16,
+  hair_Color : 'blonde',
+  fav_color : 'red',
+  fav_book_genre : 'mystery',
+  signature : function(){
+    console.log('Love, ' + this.name);
+  }
+};
 
+var ned_characteristics = {
+  name : 'Ned',
+  age : 17,
+  hair_Color : 'brown',
+  fav_color : 'blue',
+  fav_book_genre : 'romance',
+  signature : function(){
+    console.log('Thanks! -' + this.name);
+  }
+};
+
+// Intro
 function intro() {
   console.log('Quiz Responses');
   alert('Are you a true Nancy Drew?');
@@ -6,10 +29,10 @@ function intro() {
   alert('Enter either Yes or No');
 }
 
-//keep a tally
+// Keep a tally of points
 var tally = [];
 
-// Question 1 about user's curiosity
+// Question 1: Curiosity
 function hasCuriosity() {
   var curiosity = prompt('Do you have a strong sense of curiosity?').toUpperCase();
   if (curiosity === 'N' || curiosity === 'NO') {
@@ -23,7 +46,7 @@ function hasCuriosity() {
   return console.log('Sense of curiosity: ' + curiosity);
 }
 
-// Question 2 about user's attention to detail
+// Question 2: Attention to detail
 function hasDetail() {
   var detail = prompt('Are you good at remembering small details? ').toUpperCase();
   if (detail === 'N' || detail === 'NO') {
@@ -37,7 +60,7 @@ function hasDetail() {
   return console.log('Can remember small details: ' + detail);
 }
 
-// Question 3 about user's likeliness to jet off on a case
+// Question 3: Jetsetter
 function hasWhim() {
   var whim = prompt('Have you ever gone on a trip on a whim?').toUpperCase();
   if (whim === 'N' || whim === 'NO') {
@@ -52,7 +75,7 @@ function hasWhim() {
 }
 
 
-// Question 4 about user's secret identity
+// Question 4: Secret identity
 function hasSecretID() {
   var identity = prompt('Have you ever had a secret identity?').toUpperCase();
   if (identity === 'N' || identity === 'NO') {
@@ -66,7 +89,7 @@ function hasSecretID() {
   return console.log('Secret identity: ' + identity);
 }
 
-// Question 5 about user's ownership of a magnifying glass
+// Question 5: Magnifyer
 function hasMagnifyGlass() {
   var magnifying_glass = prompt('Do you have a magnifying glass?').toUpperCase();
   if (magnifying_glass === 'N' || magnifying_glass === 'NO') {
@@ -85,15 +108,14 @@ function repeatResponses(hasCuriosity, hasDetail, hasWhim, hasSecretID, hasMagni
   return 'You answered: ' + hasCuriosity + ', ' + hasDetail + ', ' + hasWhim + ', ' + hasSecretID + ', ' + hasMagnifyGlass;
 }
 
+// Generate random book number
 function generateBookNum() {
-  // Question 6 about picking the Nancy Drew book number of the day
-  //confirm user guess is a float
   var book_num = parseInt(99);
   return book_num;
 }
 
+// Question 6: Award bonus point for correctly guessing which of the 175 Nancy Drew books is the featured book of the day.
 function askBookNum(book_num) {
-  //Award bonus point for correctly guessing which of the 175 Nancy Drew books is the featured book of the day.
   alert('Bonus point for guessing which book number is the featured book of the day.');
 
   var user_guess = prompt('Guess which of the 175 books is the book of the day: ');
@@ -124,8 +146,8 @@ function askBookNum(book_num) {
   }
 }
 
+// Question 7: Main contacts
 function nancyFriend() {
-  // Question 7 about naming one of Nancy's main phone contacts.
   var nancy_friends = ['her Dad', 'mr. drew', 'mr drew', 'father', 'carson drew', 'frank', 'frank hardy', 'joe', 'joe hardy', 'bess', 'bess marvin', 'george', 'george fayne', 'hannah', 'hannah gruen', 'ned', 'ned nickerson'];
   var user_guess_friends = prompt('Name one of the 7 people Nancy usually calls to help solve a mystery.').toLowerCase();
 
@@ -153,8 +175,8 @@ function keepTally() {
 }
 
 
+// Confirm if true Nancy Drew
 function confirmNancyDrew() {
-  // Confirm if they are a Nancy Drew
   if (tally.length > 5) {
     alert('You are a true Nancy Drew!');
     console.log('User is a true Nancy Drew');
@@ -164,43 +186,19 @@ function confirmNancyDrew() {
   }
 }
 
+function run_quiz() {
+  intro();
+  hasCuriosity();
+  hasDetail();
+  hasWhim();
+  hasSecretID();
+  hasMagnifyGlass();
+  repeatResponses();
+  generateBookNum();
+  askBookNum();
+  nancyFriend();
+  keepTally();
+  confirmNancyDrew();
+}
 
-intro();
-hasCuriosity();
-hasDetail();
-hasWhim();
-hasSecretID();
-hasMagnifyGlass();
-repeatResponses();
-generateBookNum();
-askBookNum();
-nancyFriend();
-keepTally();
-confirmNancyDrew();
-
-
-
-var nancy_characteristics = {
-  name : 'Nancy',
-  age : 16,
-  hair_Color : 'blonde',
-  fav_color : 'red',
-  fav_book_genre : 'mystery',
-  signature : function(){
-    console.log('Love, ' + this.name);
-  }
-};
-
-var ned_characteristics = {
-  name : 'Ned',
-  age : 17,
-  hair_Color : 'brown',
-  fav_color : 'blue',
-  fav_book_genre : 'romance',
-  signature : function(){
-    console.log('Thanks! -' + this.name);
-  }
-};
-
-nancy_characteristics['signature']();
-ned_characteristics.signature();
+run_quiz();

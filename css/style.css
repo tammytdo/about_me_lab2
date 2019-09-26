@@ -1,21 +1,44 @@
-* 
+body {
+    margin: 15px;
+}
+
 h1 {
     color: #bb0811;
 }
 
-h2, h3, h4 {
-    color: #8f070e;
+h2 {
+    color: #bb0811;
 }
 
-li {
-    color: #361a0a;
-
+h3 {
+    color: #bb0811;
+    font-size: 20px;
 }
 
-body {
-    background-color: #ffffff;
+p {
+    font-size: 20px;
 }
 
 footer {
-    color: #018c91ea;
+    color: #bb0811;
+}
+
+div {
+    margin: 15px;
+}
+
+#intro {
+    margin: 15px 15px 50px 15px;
+}
+
+#questions {
+    margin: 15px 15px 50px 15px;
+}
+
+#books {
+    margin: 15px 15px 50px 15px;
+}
+
+footer {
+    margin: 15px;
 }
