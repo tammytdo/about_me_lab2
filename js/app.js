@@ -122,18 +122,21 @@ function bookOfTheDay() {
 }
 
 // Question 7: Main contacts
-function nancyFriend() {
-  var nancy_friends = ['her Dad', 'mr. drew', 'mr drew', 'father', 'carson drew', 'frank', 'frank hardy', 'joe', 'joe hardy', 'bess', 'bess marvin', 'george', 'george fayne', 'hannah', 'hannah gruen', 'ned', 'ned nickerson'];
+function nancyFriends() {
+  var nancy_friends = ['her dad', 'dad', 'mr. drew', 'mr drew', 'father', 'carson', 'carson drew', 'frank', 'frank hardy', 'joe', 'joe hardy', 'bess', 'bess marvin', 'george', 'george fayne', 'hannah', 'hannah gruen', 'ned', 'ned nickerson'];
+
   var user_guess_friends = prompt('Name one of the 7 people Nancy usually calls to help solve a mystery.').toLowerCase();
 
-  for (var i = 1; i < 7; i++) {
+  var guesses_left = 6;
+  for (var i = 0; i < 6; i++) {
     if (nancy_friends.includes(user_guess_friends)) {
       alert('Correct!');
       console.log('User correctly answered '+ user_guess_friends + ' as Nancy\'s friend');
       tally.push(1);
       break;
     } else if (user_guess_friends !== nancy_friends[i]) {
-      user_guess_friends = prompt('Incorrect. Guess again.');
+      user_guess_friends = prompt('Incorrect. Guesses left: ' + guesses_left + '.');
+      guesses_left--
       console.log('Incorrectly guessed a friend');
     }
   }
@@ -196,7 +199,7 @@ function run_quiz() {
   // generateBookNum();
   // askBookNum();
   bookOfTheDay();
-  nancyFriend();
+  nancyFriends();
   keepTally();
   confirmNancyDrew();
 }
